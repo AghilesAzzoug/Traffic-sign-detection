@@ -4,6 +4,7 @@ Speed detection
 ![alt text](https://github.com/AghilesAzzoug/Traffic-sign-detection/blob/master/speed_detect.png)
 
 Stop detection
+
 ![alt text](https://github.com/AghilesAzzoug/Traffic-sign-detection/blob/master/stop_detect.png)
 
 # What does it do?
