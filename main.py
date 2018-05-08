@@ -104,7 +104,7 @@ def detect_speed(img):
         return "Unknown", 0
 
 
-def run_logic():
+def start():
     lastlimit = "00"
     lastdetect = "00"
     downscale = DOWNSCALE
@@ -213,16 +213,15 @@ FLANN = None
 CAP = None
 MIN_KEY_POINT = 5
 FLANNTHRESHOLD = 0.8
-CHECKS = 50
-TREES = 5
 N_MATCHES = 2
 DOWNSCALE = 1
 CAM_INDEX = 0
+
 if __name__ == "__main__":
     CAP = cv2.VideoCapture(CAM_INDEX)
     SPEEDCLASSIFIER = cv2.CascadeClassifier("speed_signs_lbp.xml")
     STOPCLASSIFIER = cv2.CascadeClassifier("stop_signs_lbp.xml")
 
-    FLANN = cv2.FlannBasedMatcher(dict(algorithm=0, trees=TREES), dict(checks=CHECKS))
+    FLANN = cv2.FlannBasedMatcher(dict(algorithm=0, trees=5), dict(checks=50))
 
-    run_logic()
+    start()
